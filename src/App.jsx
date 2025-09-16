@@ -28,24 +28,24 @@ const App = () => {
 
   return (
     <section id="leftabout">
-      <div className="w-full h-auto flex bg-[#0a1128] text-blue-200"
-          onMouseMove={handleMouseMove}
-        >
-          {/* Glowing highlight circle */}
-          <div
-            className="pointer-events-none absolute bg-blue-400 rounded-full mix-blend-screen filter blur-3xl opacity-20 transition-all duration-20"
-            style={{
-              width: 450,
-              height: 450,
-              top: mousePos.y - 205,
-              left: mousePos.x - 205,
-              boxShadow: "0 0 30px 15px #3b82f6", // Tailwind blue-500 glow
-            }}
-          />
-          
-        
-        <div className="w-[40%] h-screen fixed top-0 text-blue-200 mr-4 flex flex-col items-center justify-center">
-          <div>
+      <div
+        className="w-full h-auto flex max-md:flex-col bg-[#0a1128] text-blue-200 overflow-hidden"
+        onMouseMove={handleMouseMove}
+      >
+        {/* Glowing highlight circle */}
+        <div
+          className="max-md:hidden pointer-events-none absolute bg-blue-400 rounded-full mix-blend-screen filter blur-3xl opacity-20 transition-all duration-20"
+          style={{
+            width: 450,
+            height: 450,
+            top: mousePos.y - 205,
+            left: mousePos.x - 205,
+            boxShadow: "0 0 30px 15px #3b82f6", // Tailwind blue-500 glow
+          }}
+        />
+
+        <div className="w-[40%] max-md:w-full md:h-screen md:fixed top-0 text-blue-200 md:mr-4 flex flex-col items-center justify-center">
+          <div className="max-md:my-6 max-md:mt-20">
             <h1 className="text-5xl text-white/90 font-bold mb-2">
               RIYA SINGH
             </h1>
@@ -107,9 +107,9 @@ const App = () => {
               ></div>{" "}
               <h1>Project</h1>
             </a>
-            <div className=" h-[50%]"></div>
+            <div className=" h-[50%] max-md:hidden"></div>
           </div>
-          <div>
+          <div className="max-md:hidden">
             <h1 className="text-sm">FIND ME ON</h1>
             <p className="text-xs">
               Feel free to <span className="purple">connect </span>with me
@@ -158,7 +158,7 @@ const App = () => {
             </ul>
           </div>
         </div>
-        <div className="ml-[50%] w-[40%] p-20">
+        <div className="md:ml-[50%] md:w-[40%] p-20">
           <div
             onMouseEnter={() => {
               handlemousePosition("about");
@@ -187,6 +187,54 @@ const App = () => {
               <span className="text-white/70">React.js and Tailwind CSS</span>,
               deployed with Vercel.
             </p>
+            <div className="md:hidden">
+              <h1 className="text-sm">FIND ME ON</h1>
+              <p className="text-xs">
+                Feel free to <span className="purple">connect </span>with me
+              </p>
+              <ul className="flex justify-center gap-6 pt-[15px] relative list-none mt-8">
+                <li className="social-icons">
+                  <a
+                    href="https://github.com/riya-singh-bgs"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour text-3xl hover:text-white"
+                  >
+                    <AiFillGithub />
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="https://www.linkedin.com/in/riya-kumari-932454310/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour text-3xl hover:text-white"
+                  >
+                    <AiOutlineTwitter />
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="https://www.linkedin.com/in/riya-kumari-932454310/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour text-3xl hover:text-white"
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="https://www.instagram.com/singh__.riyaa/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour text-3xl hover:text-white"
+                  >
+                    <AiFillInstagram />
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ const Project = () => {
             <h1 className="text-xl">{items.title}</h1>
             <p>{items.year}</p>
           </div>
-          <div className="p-6 flex gap-4 flex-wrap w-[80%]">
+          <div className="p-6 flex gap-4 flex-wrap md:w-[80%]">
             {items.buildWith.map((item) => (
                 <div className="bg-[#2c464470] py-1 px-3 rounded-full text-[#68a8a5]">{item}</div>
             ))}

@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section id="about">
     <div className="text-blue-200">
-      <div className="mt-20">
+      <div className="md:mt-20 max-md:-mt-10">
         <p className="tracking-widest">
           I&apos;m a developer who thrives on crafting accessible,{" "}
           <span className="text-white">pixel-perfect user interfaces</span> that
